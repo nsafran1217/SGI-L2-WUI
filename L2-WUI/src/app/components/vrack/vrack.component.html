@@ -5,7 +5,11 @@
             <div *ngFor="let brick of lstBrick" style="cursor:pointer;">
                 <brick-o300 *ngIf="brick.skin==='o300'" [brick]="brick" [sysid]="brick.id" (click)="btnBrickDialog(brick)"></brick-o300>
                 <brick-o350 *ngIf="brick.skin==='o350' || brick.skin==='tezro'" [skin]="brick.skin" [brick]="brick" [sysid]="brick.id" (click)="btnBrickDialog(brick)"></brick-o350>
+                <brick-a350 *ngIf="brick.skin==='yellow' || brick.skin==='grey'" [skin]="brick.skin" [brick]="brick" [sysid]="brick.id" (click)="btnBrickDialog(brick)"></brick-a350>
+                <brick-a3000 *ngIf="brick.skin==='a3000'" [brick]="brick" [sysid]="brick.id" (click)="btnBrickDialog(brick)"></brick-a3000>
+                <brick-a3000ix *ngIf="brick.skin==='a3000ix'" [brick]="brick" [sysid]="brick.id" (click)="btnBrickDialog(brick)"></brick-a3000ix>
                 <brick-router *ngIf="brick.skin==='router'" [brick]="brick" [sysid]="brick.id" (click)="btnBrickDialog(brick)"></brick-router>
+                <brick-router-altix *ngIf="brick.skin==='router-altix'" [brick]="brick" [sysid]="brick.id" (click)="btnBrickDialog(brick)"></brick-router-altix>
             </div>
         </div>
     </div>
@@ -15,6 +19,7 @@
             <mat-icon>refresh</mat-icon>
             Refresh
         </button>
+        <button mat-button style="width: 64px;" (click)="btnShowTestRack()" title="Load test rack"></button>
     </div>
-    <button mat-button style="width: 64px;" (click)="btnShowTestRack()" title="Load test rack"></button>
+    
 </div>

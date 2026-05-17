@@ -1,0 +1,31 @@
+.brick--3U { 
+    background-image: url(../../../../assets/img/bricks/a3000.png);
+    height: 115px; background-size: contain; background-repeat: no-repeat;
+}
+.lcd { 
+    position: absolute; left: 341px; top: 42px; font-size: 6px; color: black;
+    line-height: 5px; overflow: hidden; white-space: nowrap; width: 33px;
+}
+.powerButton { position: absolute; background-color: rgb(0,121,11); border: 1px solid black; border-radius: 9px; 
+    width: 8px; height: 8px; left: 352px; top: 69px;
+}
+.led { position: absolute; background-color: grey; border: 1px solid black; border-radius: 9px; width: 5px; height: 5px;}
+.attentionLED {  left: 338px; top: 65px; }
+.faultLED { left: 338px; top: 76px; }
+
+@media all and (max-width: 480px) {
+    .lcd { left: 300px; top: 38px; width: 29px; font-size: 5px; line-height: 4px; }
+    .powerButton { width: 8px; height: 8px; left: 310px; top: 61px; }
+    .attentionLED { left: 298px; top: 57px; width: 4px; height: 4px; }
+    .faultLED { left: 298px; top: 67px; width: 4px; height: 4px; }
+}
+@media all and (min-width: 900px) {
+    .lcd { left: 467px; top: 58px; width: 47px; font-size: 8px; line-height: 7px; }
+    .powerButton { width: 11px; height: 11px; left: 483px; top: 95px; }
+    .attentionLED { left: 464px; top: 89px; width: 8px; height: 8px; }
+    .faultLED { left: 464px; top: 104px; width: 8px; height: 8px; }
+}
+
+.LEDon { background-color: greenyellow; }
+.faultLED.LEDon { background-color: rgb(255, 47, 47); }
+.attentionLED.LEDon { background-color: rgb(255, 200, 47); }
