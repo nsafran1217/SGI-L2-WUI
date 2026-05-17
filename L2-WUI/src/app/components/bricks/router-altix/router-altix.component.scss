@@ -1,0 +1,31 @@
+.brick { 
+    background-image: url(../../../../assets/img/bricks/router-altix.png);
+    height: 83px; background-size: contain; background-repeat: no-repeat;
+}
+.lcd { 
+    position: absolute; left: 343px; top: 22px; font-size: 6px; color: black;
+    line-height: 5px; overflow: hidden; white-space: nowrap; width: 35px;
+}
+.powerButton { position: absolute; background-color: rgb(0,121,11); border: 1px solid black; border-radius: 9px; 
+    width: 9px; height: 9px; left: 354px; top: 41px;
+}
+.led { position: absolute; background-color: grey; border: 1px solid black; border-radius: 9px; width: 5px; height: 5px;}
+.attentionLED {  left: 341px; top: 38px; }
+.faultLED { left: 341px; top: 49px; }
+
+@media all and (max-width: 480px) {
+    .lcd { left: 303px; top: 19px; width: 30px; font-size: 5px; line-height: 4px; }
+    .powerButton { width: 8px; height: 8px; left: 312px; top: 36px; }
+    .attentionLED { left: 301px; top: 33px; width: 4px; height: 4px; }
+    .faultLED { left: 301px; top: 43px; width: 4px; height: 4px; }
+}
+@media all and (min-width: 900px) {
+    .lcd { left: 471px; top: 29px; width: 47px; font-size: 8px; line-height: 7px; }
+    .powerButton { width: 11px; height: 11px; left: 487px; top: 58px; }
+    .attentionLED { left: 468px; top: 52px; width: 8px; height: 8px; }
+    .faultLED { left: 468px; top: 67px; width: 8px; height: 8px; }
+}
+
+.LEDon { background-color: greenyellow; }
+.faultLED.LEDon { background-color: rgb(255, 47, 47); }
+.attentionLED.LEDon { background-color: rgb(255, 200, 47); }

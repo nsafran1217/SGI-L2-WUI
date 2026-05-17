@@ -1,4 +1,6 @@
 .brick { position: relative; border: 1px solid black; width: 408px; }
+.brick--3U { position: relative; border: 1px solid black; width: 408px; }
+.brick--4U { position: relative; border: 1px solid black; width: 408px; }
 .sysid { background-color: rgba(0,0,0,0.5); 
     padding: 2px 6px; border-radius: 4px; 
     font-size: 13px; color: white;
@@ -9,7 +11,11 @@
 
 @media all and (max-width: 480px) {
     .brick { width: 360px; height: 73px; }
+    .brick--3U { width: 360px; height: 101px; }
+    .brick--4U { width: 360px; height: 136px; }
 }
 @media all and (min-width: 900px) {
     .brick { width: 560px; height: 114px; }
+    .brick--3U { width: 560px; height: 158px; }
+    .brick--4U { width: 560px; height: 210px; }
 }
