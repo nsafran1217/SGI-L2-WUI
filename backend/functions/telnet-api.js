@@ -143,7 +143,7 @@ function parse_brick(strin, config) {
                             rc[objID].skin = "o350";
                             rc[objID].productLabel = "sgi onyx 350";
                         } else if (bType.startsWith('Opus')) { //Altix 350
-                            if (config.altix350Style == "grey") {
+                            if (config.altix350Style && config.altix350Style === "grey") {
                                 rc[objID].skin = "grey";
                             } else {
                                 rc[objID].skin = "yellow";
