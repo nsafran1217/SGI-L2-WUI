@@ -1,6 +1,7 @@
 # SGI L2 Controller Web User Interface
 
 by flexion and chulofiasco 2023
+Altix bricks by nater1217
 
 
 # L2-WUI
@@ -22,3 +23,9 @@ Now go to the `backend` directory:
 Now start the webserver, launch `npm start` in the backend directory.
 
 Navigate to http://{IP}:4201
+
+
+<img src="https://raw.githubusercontent.com/flexion-unity/SGI-L2-WUI/main/_res/img/sgi-l2-wui-vrack.png">
+
+<img src="https://github.com/flexion-unity/SGI-L2-WUI/raw/main/_res/img/sgi-l2-wui-ctrl.png">
+
