@@ -31,6 +31,7 @@ import { BrickRouterComponent } from './components/bricks/router/router.componen
 import { BrickRouterAltixComponent } from './components/bricks/router-altix/router-altix.component';
 import { BrickO350Component } from './components/bricks/o350/o350.component';
 import { Bricka350Component } from './components/bricks/a350/a350.component';
+import { Bricknl4rComponent } from './components/bricks/nl4r/nl4r.component';
 import { Bricka3000Component } from './components/bricks/a3000/a3000.component';
 import { Bricka3000ixComponent } from './components/bricks/a3000ix/a3000ix.component';
 import { RackInfoComponent } from './components/rackinfo/rackinfo.component';
@@ -55,6 +56,7 @@ import { ConsoleComponent } from './components/console/console.component';
     BrickO300Component,
     BrickO350Component,
     Bricka350Component,
+    Bricknl4rComponent,
     Bricka3000Component,
     Bricka3000ixComponent,
     BrickRouterComponent,

@@ -69,7 +69,9 @@ function parse_config(strcfg) {
 function parse_display(strdsp) {
     try {
         let rc = {};
-        const lst = strdsp.split('\n');
+        // strip non-printable characters except tab/newline/carriage-return
+        const clean = (strdsp || '').replace(/[^	\n\r\x20-\x7E]/g, '');
+        const lst = clean.split('\n');
         let objID = '';
         lst.forEach(row => {
             if (row !== '') {
@@ -102,7 +104,9 @@ function parse_display(strdsp) {
 function parse_brick(strin, config) {
     try {
         let rc = {};
-        const lst = strin.split('\n');
+        // strip non-printable characters except tab/newline/carriage-return
+        const clean = (strin || '').replace(/[^	\n\r\x20-\x7E]/g, '');
+        const lst = clean.split('\n');
         let objID = '';
         lst.forEach(row => {
             if (row !== '') {
@@ -122,17 +126,22 @@ function parse_brick(strin, config) {
                     "Chimera Blade [2MB flash]" = Onyx350
                     "Chimera Server [2MB flash]" = Origin350
                     "Opus [2MB flash]" = Altix 350
+                    "NL4R [2MB flash]" = NL4R router
                     "C (IP41) [2MB flash]" = Altix 3000
                     "IX [2MB flash]" = Altix 3000 iX
                      */
+                    let bType = (rc[objID].type || '').trim();
                     if (rc[objID].brickType === 'R') {
-                        if (config.routerStyle && config.routerStyle === "altix") {
+                        if (bType.startsWith('NL4R')) { //NL4R
+                            rc[objID].skin = "nl4r";
+                            rc[objID].productLabel = "sgi nl4r";
+                        }
+                        else if (config && config.routerStyle && config.routerStyle === "altix") {
                             rc[objID].skin = "router-altix";
                         } else {
                             rc[objID].skin = "router";
                         }
-                    } else {
-                        let bType = (rc[objID].type || '').trim();
+                    } else {                  
                         if (bType.startsWith('C (IP45)')) {
                             rc[objID].skin = "o300";
                             rc[objID].productLabel = 'sgi origin 300';
@@ -143,7 +152,7 @@ function parse_brick(strin, config) {
                             rc[objID].skin = "o350";
                             rc[objID].productLabel = "sgi onyx 350";
                         } else if (bType.startsWith('Opus')) { //Altix 350
-                            if (config.altix350Style && config.altix350Style === "grey") {
+                            if (config && config.altix350Style && config.altix350Style === "grey") {
                                 rc[objID].skin = "grey";
                             } else {
                                 rc[objID].skin = "yellow";

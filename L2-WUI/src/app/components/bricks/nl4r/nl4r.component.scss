@@ -1,9 +1,7 @@
 .brick { 
+    background-image: url(../../../../assets/img/bricks/nl4r.png);
     height: 83px; background-size: contain; background-repeat: no-repeat;
 }
-.a350yellowSkin { background-image: url(../../../../assets/img/bricks/a350-yellow.png); }
-.a350greySkin { background-image: url(../../../../assets/img/bricks/a350-grey.png); }
-
 .lcd { position: absolute; left: 183px; top: 29px; font-size: 8px; color: black;
     line-height: 8px; overflow: hidden; white-space: nowrap; width: 43px;
 }
@@ -21,7 +19,6 @@
     .faultLED { left: 163px; top: 46px; height: 7px; }
     .productLabel { left: 240px; top: 53px; font-size: 9px; }
 }
-
 @media all and (min-width: 900px) {
     .lcd { left: 250px; top: 42px; width: 63px; font-size: 9px; line-height: 9px; }
     .powerButton { width: 3px; height: 8px; left: 280px; top: 74px; }

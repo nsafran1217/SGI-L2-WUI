@@ -8,6 +8,7 @@
                 <brick-a350 *ngIf="brick.skin==='yellow' || brick.skin==='grey'" [skin]="brick.skin" [brick]="brick" [sysid]="brick.id" (click)="btnBrickDialog(brick)"></brick-a350>
                 <brick-a3000 *ngIf="brick.skin==='a3000'" [brick]="brick" [sysid]="brick.id" (click)="btnBrickDialog(brick)"></brick-a3000>
                 <brick-a3000ix *ngIf="brick.skin==='a3000ix'" [brick]="brick" [sysid]="brick.id" (click)="btnBrickDialog(brick)"></brick-a3000ix>
+                <brick-nl4r *ngIf="brick.skin==='nl4r'" [brick]="brick" [sysid]="brick.id" (click)="btnBrickDialog(brick)"></brick-nl4r>
                 <brick-router *ngIf="brick.skin==='router'" [brick]="brick" [sysid]="brick.id" (click)="btnBrickDialog(brick)"></brick-router>
                 <brick-router-altix *ngIf="brick.skin==='router-altix'" [brick]="brick" [sysid]="brick.id" (click)="btnBrickDialog(brick)"></brick-router-altix>
             </div>
@@ -18,8 +19,8 @@
         <button mat-fab extended color="primary" (click)="btnGetConfig(true)" [disabled]="backendSVC.loading">
             <mat-icon>refresh</mat-icon>
             Refresh
-        </button>
-        <button mat-button style="width: 64px;" (click)="btnShowTestRack()" title="Load test rack"></button>
+        </button>  
     </div>
+    <button mat-button style="width: 64px;" (click)="btnShowTestRack()" title="Load test rack"></button>
     
 </div>
