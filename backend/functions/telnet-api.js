@@ -122,6 +122,7 @@ function parse_brick(strin, config) {
                     "Chimera Blade [2MB flash]" = Onyx350
                     "Chimera Server [2MB flash]" = Origin350
                     "Opus [2MB flash]" = Altix 350
+                    "NL4R [2MB flash]" = NL4R router
                     "C (IP41) [2MB flash]" = Altix 3000
                     "IX [2MB flash]" = Altix 3000 iX
                      */
@@ -149,6 +150,9 @@ function parse_brick(strin, config) {
                                 rc[objID].skin = "yellow";
                             }
                             rc[objID].productLabel = "sgi altix 350";
+                        }  else if (bType.startsWith('NL4R')) { //NL4R
+                            rc[objID].skin = "nl4r";
+                            rc[objID].productLabel = "sgi nl4r";
                         }  else if (bType.startsWith('C (IP41)')) { //Altix 3000
                             rc[objID].skin = "a3000";
                             rc[objID].productLabel = "sgi altix 3000";
